@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle Recycles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <img src="icon.png" alt="Cycle Recycles Logo" style="height: 50px; width: auto;">
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#map">Recycling Locations</a>
+            <a href="#auth">Login/Signup</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to Cycle Recycles</h1>
+        <p>Turning old cycles into something new and amazing!</p>
+        <button onclick="scrollToSection('about')">Learn More</button>
+    </div>
+
+    <section class="section" id="about">
+        <h2>About Us</h2>
+        <p>Cycle Recycles is dedicated to promoting sustainability by refurbishing and reusing old bicycles. Join us in our mission to reduce waste and create a greener future!</p>
+    </section>
+
+    <section class="section" id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Bicycle Recycling</h3>
+                <p>We recycle old and damaged bicycles to minimize environmental waste.</p>
+            </div>
+            <div class="service-card">
+                <h3>Bicycle Refurbishment</h3>
+                <p>Transform your old bike into a new one with our expert refurbishment services.</p>
+            </div>
+            <div class="service-card">
+                <h3>Donation Program</h3>
+                <p>Donate your bike to those in need and support local communities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recycling Locations Section -->
+    <section class="section" id="map">
+        <h2>Recycling Locations</h2>
+        <div id="mapContainer"></div>
+    </section>
+
+    <!-- QR Scanner Section -->
+    <section class="section" id="qr-scanner">
+        <h2>Scan QR Code</h2>
+        <div id="qr-reader"></div>
+    </section>
+
+    <!-- Login / Signup Section -->
+    <section class="section" id="auth">
+        <h2>Login / Signup</h2>
+        <!-- Login Form -->
+        <div id="login-form">
+            <h3>Login</h3>
+            <input type="email" id="login-email" placeholder="Enter Email" required />
+            <input type="password" id="login-password" placeholder="Enter Password" required />
+            <button onclick="login()">Login</button>
+        </div>
+
+        <!-- Signup Form -->
+        <!-- Note that signup is disabled for the predefined user -->
+    </section>
+
+    <!-- Footer -->
+    <footer>&copy; Cycle Recycles - All Rights Reserved</footer>
+
+    <!-- External Libraries -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
+
+</body>
+</html>
